@@ -24,7 +24,7 @@ class AcmeProductTests(unittest.TestCase):
     def test_stealability_and_expode(self):
         """Test functionality of stealability and explode methods"""
         prod = Product('Test Product')
-        self.assertEqual(prod.stealability(), "Very stealable!")
+        self.assertEqual(prod.stealability(), 'Very stealable!')
         self.assertEqual(prod.explode(), '...boom!')
 
     def test_identifier_functionality(self):
