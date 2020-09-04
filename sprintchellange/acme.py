@@ -31,12 +31,12 @@ class Product:
         To do specific condition and return
         """
 
-        product  = self.price/self.weight
+        product  = self.price / self.weight
 
         if product  < 0.5:
             return("Not so stealable...")
 
-        elif (product >= 0.5) & (product < 1):
+        elif (product >= 0.5) & (product < 1.0):
             return("Kinda stealable.")
 
         else:

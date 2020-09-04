@@ -268,21 +268,13 @@ career here, you'll have to answer the following:
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
-Answer both of these questions (baseline ~5 sentences) here in text.
 
-1. Code review gives you a second set of eyes on your code.
-   Someone else looking at your code can give you ideas on how to improve or
-   make your code run faster. It also important when working on teams because it
-   makes it so more than just one person on your team understands what your code
-   is doing. This matters because if you leave the project someone will need to
-   understand your code and continue working with it.
 
-2. Containers help to ensure that when you run a particular software that you
-   have the required (and the same version of) dependencies. This makes the
-   program you are writing more deterministic, meaning whenever someone else
-   runs your code, it does what it was meant to on the first device. containers
-   are also good when working on multiple operating systems because the program
-   can run in a container on any operating system.
+I think the code review is Definition: Code review is a systematic detections of software source code, intended or predainted to see bugs and to estimate the code quality. Also, the process of the code review can be done by a good practice to help me to find more ways to fix those issues. Also, the code review process is a part of a software quality assurance activity.
+
+
+
+Containers can be a good solution for some problems regarding the software to be able to run them okay when you transforming from place to another place. Containers also can be a class or datat structure to instance collections of other objects. A good example like Docker and virtural environments are good for cleaning envrionments that are relatively isolated as packages for deployement. When we are dealing with issues for reproduceability and replicability virtual environments solve those problems by providing a space for the whole operating system. In addition to that, the size of container must have the numbers of objects. Also, containers can include software dependencies.
 
 ### Part 8 - Turn it in!
 
