@@ -13,7 +13,7 @@ def generate_products(x=30):
     name = [rm.choice(adjectives) + " " + rm.choice(nouns) for i in range(x)]
     price = [rm.choice([i for i in range(5, 100)]) for i in range(x)]
     weight = [rm.choice([i for i in range(5, 100)]) for i in range(x)]
-    flammability = [round(rm.uniform(0.0, 2.5), 2) for i in range(x)]
+    flammability = [round(rm.uniform(0.0, 2.5)) for i in range(x)]
     products = [[name[i], price[i], weight[i],
                  flammability[i]] for i in range(x)]
     return products
