@@ -13,7 +13,7 @@ class Product:
                  price=10,
                  weight=20,
                  flammability=0.5,
-                 identifier=rm.randrange(1000000, 9999999)):
+                 identifier=rm.randrange(1000000,10000000)):
         """
         Define a constructor method to include some fields
         """               
