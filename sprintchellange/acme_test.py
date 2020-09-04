@@ -12,9 +12,9 @@ class AcmeProductTests(unittest.TestCase):
         self.assertEqual(prod.price, 10)
 
     def test_default_number_products(self):
-        
+        """Test default product number can be 30"""
         prod1 = generate_products()
-        self.assertEqual(len(prod1), 40)
+        self.assertEqual(len(prod1),30)
 
     def test_legal_names(self):
         """
