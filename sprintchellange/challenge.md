@@ -6,8 +6,7 @@ In this sprint challenge you will write code and answer questions related to
 object-oriented programming, code style/reviews, containers, and testing. You
 may use any tools and references you wish, but your final code should reflect
 *your* work and be saved in `.py` files (*not* notebooks), and (along with this
-file including your written answers) added to your
-`DS-Unit-3-Sprint-1-Software-Engineering` repository.
+file including your written answers) turned in directly to your TL.
 
 For all your code, you may only import/use the following:
 - Other modules you write
@@ -18,8 +17,8 @@ As always, make sure to manage your time - get a section/question to "good
 enough" and then move on to make sure you do everything. You can always revisit
 and polish at the end if time allows.
 
-This file is Markdown, so it may be helpful to add/commit/push it first so you
-can view it all nice and rendered on GitHub.
+This file is Markdown, so it can be helpful to render with VS Code or a
+notebook to make it easier to look at.
 
 Good luck!
 
@@ -98,7 +97,7 @@ Make a subclass of `Product` named `BoxingGlove` that does the following:
 - Add a `punch` method that returns "That tickles." if the weight is below 5,
   "Hey that hurt!" if the weight is greater or equal to 5 but less than 15, and
   "OUCH!" otherwise
-
+  
 Example test run:
 
 ```python
@@ -145,9 +144,7 @@ For the report, you should calculate and print the following values:
 - Number of unique product names in the product list
 - Average (mean) price, weight, and flammability of listed products
 
-At the bottom of `acme_report.py` you should put the following code:
-
-Following is useful starting code for `acme_repory.py`:
+Following is useful starting code for `acme_report.py`:
 
 ```python
 #!/usr/bin/env python
@@ -178,7 +175,7 @@ The last lines let you test by running `python acme_report.py`. You should see
 output like:
 
 ```
-$ python acme_report.py
+$ python acme_report.py 
 ACME CORPORATION OFFICIAL INVENTORY REPORT
 Unique product names: 19
 Average price: 56.8
@@ -188,6 +185,22 @@ Average flammability: 1.258097155966675
 
 It's OK for the specifics to vary (how you message/format), but it should output
 and clearly identify all four relevant numbers.
+
+*Hint* - a great way to figure out how many unique things you have is to use a
+[set](https://docs.python.org/3.8/library/stdtypes.html#set-types-set-frozenset)
+(a collection where all items are unique, and inserting an existing item just
+doesn't do anything).
+```
+>>> s = set()
+>>> s.add(1)
+>>> s.add(2)
+>>> s
+{1, 2}
+>>> s.add(3)
+>>> s.add(1)
+>>> s
+{1, 2, 3}
+```
 
 ### Part 5 - Measure twice, Test once
 
@@ -215,7 +228,7 @@ if __name__ == '__main__':
 
 If you run the tests you should see output like:
 ```
-$ python acme_test.py
+$ python acme_test.py 
 .
 ----------------------------------------------------------------------
 Ran 1 test in 0.000s
@@ -234,7 +247,7 @@ Complete the following:
   length 30, and `test_legal_names` which checks that the generated names for a
   default batch of products are all valid possible names to generate (adjective,
   space, noun, from the lists of possible words)
-
+  
 *Hint* - `test_legal_names` is the trickiest of these, but may not be as bad as
 you think. Check out `assertIn` from `unittest`, and remember that Python is
 pretty handy at string processing. But if you get stuck, move on and revisit.
@@ -268,20 +281,20 @@ career here, you'll have to answer the following:
   slightly different things running on all of them. How could containers help us
   improve this situation?
 
+Answer both of these questions (baseline ~5 sentences) here in text.
 
 
 I think the code review is Definition: Code review is a systematic detections of software source code, intended or predainted to see bugs and to estimate the code quality. Also, the process of the code review can be done by a good practice to help me to find more ways to fix those issues. Also, the code review process is a part of a software quality assurance activity.
 
-
-
 Containers can be a good solution for some problems regarding the software to be able to run them okay when you transforming from place to another place. Containers also can be a class or datat structure to instance collections of other objects. A good example like Docker and virtural environments are good for cleaning envrionments that are relatively isolated as packages for deployement. When we are dealing with issues for reproduceability and replicability virtual environments solve those problems by providing a space for the whole operating system. In addition to that, the size of container must have the numbers of objects. Also, containers can include software dependencies.
+
 
 ### Part 8 - Turn it in!
 
-Add all the files you wrote (`acme.py`, `acme_report.py`, and `acme_test.py`),
-as well as *this* file with your answers to part 7, to your weekly repo
-(`DS-Unit-3-Sprint-1-Software-Engineering`). Commit, push, and await feedback
-from Acme Corporation management. Thanks for your hard work!
+Provide all the files you wrote (`acme.py`, `acme_report.py`, and
+`acme_test.py`), as well as *this* file with your answers to part 7, directly to
+your TL. Await feedback from Acme Corporation management. Thanks for your hard
+work!
 
 *Bonus!* Got this far? Read up on the [history of the fine Acme
 Corporation](https://en.wikipedia.org/wiki/Acme_Corporation), with decades of

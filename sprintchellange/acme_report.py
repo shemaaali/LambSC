@@ -1,22 +1,38 @@
-from acme import Product
+#!/usr/bin/env python
 import random as rm
+from acme import Product
 
 
-# Part 4 - Class Report
-def generate_products(x=30):
+ADJECTIVES = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
+NOUNS = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
+
+
+def generate_products(num_products=30):
     """
     Generate number of products represents as x 
     Randomly return the number of products into list.
     """
-    adjectives = ['Awesome', 'Shiny', 'Impressive', 'Portable', 'Improved']
-    nouns = ['Anvil', 'Catapult', 'Disguise', 'Mousetrap', '???']
-    name = [rm.choice(adjectives) + " " + rm.choice(nouns) for i in range(x)]
-    price = [rm.choice([i for i in range(5, 100)]) for i in range(x)]
-    weight = [rm.choice([i for i in range(5, 100)]) for i in range(x)]
-    flammability = [round(rm.uniform(0.0, 2.5)) for i in range(x)]
-    products = [[name[i], price[i], weight[i],
-                 flammability[i]] for i in range(x)]
-    return products
+
+    products = []
+
+    for prod in range(num_products):
+
+        adj = rm.sample(ADJECTIVES, k=1)[0]
+        noun = rm.sample(NOUNS, k=1)[0]
+        name = f'{adj} {noun}'
+        price = rm.randint(5, 100)
+        weight = rm.randint(5, 100)
+        flammability = rm.uniform(0.0, 2.5)
+
+        prod = Product(name,
+                       price=price,
+                       weight=weight,
+                       flammability=flammability
+                       )
+
+        products.append(prod)
+
+    return(products)
 
 
 def inventory_report(products):
@@ -24,11 +40,24 @@ def inventory_report(products):
     Report and calculate Number of unique product names into  the product list
     Average(mean)price, weight, and flammability as a list for products
     """
-    nunique = len(set(i[0] for i in products))
-    avgprice = sum(i[1] for i in products) / len(products)
-    avgweight = sum(i[2] for i in products) / len(products)
-    avgflammability = sum(i[3] for i in products) / len(products)
-    
+
+    names = []
+    weights = []
+    prices = []
+    flams = []
+
+    for i in range(len(products)):
+        names.append(products[i].name)
+        weights.append(products[i].weight)
+        prices.append(products[i].price)
+        flams.append(products[i].flammability)
+
+    nunique= len(set(names))
+    avgprice = sum(prices)/len(prices)
+    avgweight = sum(weights)/len(weights)
+    avgflammability = sum(flams)/len(prices)
+
+     
     print("Acme Corporation Official Inventory Report:")
     print("Unique Product Names:", nunique)
     print("Average Or Mean Price:", avgprice)
